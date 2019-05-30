@@ -1,0 +1,121 @@
+.home-nav{
+    background-color: white;
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 15px 25px;
+    position: absolute;
+    left: 38%;
+    top: 10px;
+
+}
+#santa1{
+    width: 20%;
+}
+#frosty{
+    float: right;
+    width: 20%;
+}
+#kk2019{
+    background-color: white;
+    border-radius: 25px;
+    width: 90%;
+    margin: auto;
+    border: 5px dotted red;
+}
+#see-form{
+    width: 90%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.spacer{
+    padding-top: 15px;
+}
+.preferences{
+    width: 100%;
+    font-size: 1.2em;
+    margin-left: 30px;
+    /* border: 2px solid black; */
+}
+select, input{
+    width: 80%;
+    margin-left: 8%;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.spacer{
+    margin-bottom: 10px;
+}
+.alert, .show-prefs, .saved{
+    margin-top: -50px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #c54245;
+    padding: 10px 20px;
+    border-radius: 25px 25px 25px 25px;
+    color: white;
+    font-size: 1.5rem;
+    /* display: none; */
+}
+.show-prefs{
+    background-color: green;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.show-prefs p{
+    margin: 20px 0px;
+}
+.saved{
+    text-align: center;
+    background-color: green;
+}
+#see-btn{
+    margin-left: 30px;
+}
+#set-btn{
+    margin-left: 32px;
+}
+@media only screen and (min-width: 600px) {
+    .home-nav{
+        left: 45%;
+    }
+    .home-nav:hover{
+        background-color: green;
+        color: white;
+        border: 3px dotted red;
+    }
+    #santa1{
+        width: 10%;
+    }
+    #frosty{
+        float: right;
+        width: 10%;
+    }
+    #kk2019{
+        max-width: 600px;
+        margin-bottom: 50px;
+    }
+    .content-wrapper{
+        margin-bottom: 50px;
+    }
+    #see-form{
+        /* border: 2px solid black; */
+        margin: auto;
+    }
+    .preferences{
+        margin-left: 50px;
+        /* border: 2px solid black; */
+    }
+    #see-btn{
+        width: 450px;
+    }
+    #set-btn{
+        width: 480px;
+        margin-left: 50px;
+    }
+}

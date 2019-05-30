@@ -1,0 +1,164 @@
+<?php include 'assets/inc/head.inc.php'; ?>
+
+    <div>
+        <img src="/assets/img/santa.png" alt="santa" id = "santa1" />
+        <a class="home-nav" href="/index.php">Home</a>
+        <img src="/assets/img/frosty.png" alt="frosty" id = "frosty" />
+        <h1 id="kk2019">Kris Kringle 2019</h1>
+    </div>
+    <div class="content-wrapper">
+        <form id="see-form" onSubmit="" method="POST" action="">
+            <p class="spacer"><span class="preferences">I want to see..</span></p>
+            <select value="" onChange="" name="name-see">
+                <option value='' selected disabled >Select</option>
+                <option <?php if($_POST['name-see'] == 'Adam'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Amanda'){ echo 'selected'; } ?>  value="Amanda">Amanda's</option>
+                <option <?php if($_POST['name-see'] == 'Audrey'){ echo 'selected'; } ?>  value="Audrey">Audrey's</option>
+                <option <?php if($_POST['name-see'] == 'Chloe'){ echo 'selected'; } ?>  value="Chloe">Chloe's</option>
+                <option <?php if($_POST['name-see'] == 'Dale'){ echo 'selected'; } ?>  value="Dale">Dale's</option>
+                <option <?php if($_POST['name-see'] == 'Dave'){ echo 'selected'; } ?>  value="Dave">Dave's</option>
+                <option <?php if($_POST['name-see'] == 'Denise'){ echo 'selected'; } ?>  value="Denise">Denise's</option>
+                <option <?php if($_POST['name-see'] == 'Emma'){ echo 'selected'; } ?>  value="Emma">Emma's</option>
+                <option <?php if($_POST['name-see'] == 'Erin'){ echo 'selected'; } ?>  value="Erin">Erin's</option>
+                <option <?php if($_POST['name-see'] == 'Gi'){ echo 'selected'; } ?>  value="Gi">Gi's</option>
+                <option <?php if($_POST['name-see'] == 'Harry'){ echo 'selected'; } ?>  value="Harry">Harry's</option>
+                <option <?php if($_POST['name-see'] == 'Jason'){ echo 'selected'; } ?>  value="Jason">Jason's</option>
+                <option <?php if($_POST['name-see'] == 'John'){ echo 'selected'; } ?>  value="John">John's</option>
+                <option <?php if($_POST['name-see'] == 'JP'){ echo 'selected'; } ?>  value="JP">JP's</option>
+                <option <?php if($_POST['name-see'] == 'Justin'){ echo 'selected'; } ?>  value="Justin">Justin's</option>
+                <option <?php if($_POST['name-see'] == 'Linda'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Lizzie'){ echo 'selected'; } ?>  value="Lizzie">Lizzie's</option>
+                <option <?php if($_POST['name-see'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle's</option>
+                <option <?php if($_POST['name-see'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.'s</option>
+                <option <?php if($_POST['name-see'] == 'Richie W.'){ echo 'selected'; } ?>  value="Richie W.">Richie W.'s</option>
+                <option <?php if($_POST['name-see'] == 'Sam'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.'s</option>
+                <option <?php if($_POST['name-see'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.'s</option>
+                <option <?php if($_POST['name-see'] == 'Tina'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Vicky'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+            </select>
+            <p class="spacer"><span class="preferences">preferred items...</span></p>
+            <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
+<?php
+    //get preferences
+    $mysqli = new mysqli("127.0.0.1", "root", "", "kriskringle");
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    $name = $_POST['name-see'];
+    if(isset($_POST['see-prefs'])){
+        $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
+        $row = $results->fetch_assoc();
+        if(empty($row['pref1']) && empty($row['pref2']) && empty($row['pref3'])){
+            echo "<div class='alert'>
+                    <p>Aww! {$name} hasn't updated {$row['pronoun1']} preferences. Message {$row['pronoun2']} and tell {$row['pronoun2']} to add them here!</p>
+                    </div>";
+        }
+        else{
+            echo "<div class='show-prefs'>
+                <p>{$row['name']}'s first preference: {$row['pref1']}</p>
+                <p>{$row['name']}'s second preference: {$row['pref2']}</p>
+                <p>{$row['name']}'s third preference: {$row['pref3']}</p>
+            </div>";  
+        }
+
+    }
+?>
+        </form>
+    </div>
+    <div class="content-wrapper">
+        <form id="set-form" method="POST" action="">
+            <p class="spacer"><span class="preferences">I am..</span></p>
+            <select value="" onChange="" name ="name-set">
+                <option value='' selected disabled >Select</option>
+                <option <?php if($_POST['name-set'] == 'Adam'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Amanda'){ echo 'selected'; } ?>  value="Amanda">Amanda</option>
+                <option <?php if($_POST['name-set'] == 'Audrey'){ echo 'selected'; } ?>  value="Audrey">Audrey</option>
+                <option <?php if($_POST['name-set'] == 'Chloe'){ echo 'selected'; } ?>  value="Chloe">Chloe</option>
+                <option <?php if($_POST['name-set'] == 'Dale'){ echo 'selected'; } ?>  value="Dale">Dale</option>
+                <option <?php if($_POST['name-set'] == 'Dave'){ echo 'selected'; } ?>  value="Dave">Dave</option>
+                <option <?php if($_POST['name-set'] == 'Denise'){ echo 'selected'; } ?>  value="Denise">Denise</option>
+                <option <?php if($_POST['name-set'] == 'Emma'){ echo 'selected'; } ?>  value="Emma">Emma</option>
+                <option <?php if($_POST['name-set'] == 'Erin'){ echo 'selected'; } ?>  value="Erin">Erin</option>
+                <option <?php if($_POST['name-set'] == 'Gi'){ echo 'selected'; } ?>  value="Gi">Gi</option>
+                <option <?php if($_POST['name-set'] == 'Harry'){ echo 'selected'; } ?>  value="Harry">Harry</option>
+                <option <?php if($_POST['name-set'] == 'Jason'){ echo 'selected'; } ?>  value="Jason">Jason</option>
+                <option <?php if($_POST['name-set'] == 'John'){ echo 'selected'; } ?>  value="John">John</option>
+                <option <?php if($_POST['name-set'] == 'JP'){ echo 'selected'; } ?>  value="JP">JP</option>
+                <option <?php if($_POST['name-set'] == 'Justin'){ echo 'selected'; } ?>  value="Justin">Justin</option>
+                <option <?php if($_POST['name-set'] == 'Linda'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Lizzie'){ echo 'selected'; } ?>  value="Lizzie">Lizzie</option>
+                <option <?php if($_POST['name-set'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle</option>
+                <option <?php if($_POST['name-set'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.</option>
+                <option <?php if($_POST['name-set'] == 'Richie W.'){ echo 'selected'; } ?>  value="Richie W.">Richie W.</option>
+                <option <?php if($_POST['name-set'] == 'Sam'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.</option>
+                <option <?php if($_POST['name-set'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.</option>
+                <option <?php if($_POST['name-set'] == 'Tina'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Vicky'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+            </select>
+            <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
+            <span class="preferences">Preference 1:</span>
+                <input type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
+                <span class="preferences">Preference 2:</span>
+                <input type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
+                <span class="preferences">Preference 3:</span>
+                <input type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
+                <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
+<?php
+    //set preferences
+    $conn = new mysqli("127.0.0.1", "root", "", "kriskringle");
+    if ($conn->connect_errno) {
+       echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
+    }
+    $name2 = $_POST['name-set'];
+    if(isset($_POST['set-prefs'])){
+        $pref1 = $_POST['pref1'];
+        $pref2 = $_POST['pref2'];
+        $pref3 = $_POST['pref3'];
+
+        //$pref1 = mysql_real_escape_string($pref1);
+        if($pref1 != ''){
+            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("s", $pref1); // 's' specifies the variable type => 'string'
+            if($stmt->execute()){
+                $success1 = true;
+            }
+            else{
+                $success1 = false;
+            }
+
+        }
+        if($pref2 != ''){
+            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("s", $pref2); // 's' specifies the variable type => 'string'
+            if($stmt->execute()){
+                $success2 = true;
+            }
+            else{
+                $success2 = false;
+            }
+        }
+        if($pref3 != ''){
+            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("s", $pref3); // 's' specifies the variable type => 'string'
+            if($stmt->execute()){
+                $success3 = true;
+            }
+            else{
+                $success4 = false;
+            }
+        }
+        if($success1 == true || $success2 == true || $success3 == true){
+            echo "<div class='saved'>Preferences Saved!</div>";
+        }
+        else{
+            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were saved. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
+
+        }
+    }
+?>
+        </form>
+      </div>
+<?php include 'assets/inc/footer.inc.php'; ?>
+

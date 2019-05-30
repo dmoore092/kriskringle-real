@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lobster', cursive;
+  line-height: 1.4;
+  background: url("/assets/img/christmas_wallpaper.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 10% 50%;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+h1{
+  text-align: center;
+  font-size: 3rem;
+}
+.welcome{
+  margin-top: 40px;
+  font-size: 4rem;
+  text-align: center;
+  background-size: cover;
+  font-family: 'Lobster', cursive;
+}
+.santa{
+  width: 55%;
+  margin-left: 23%;
+  margin-top: 3px;
+  /* border: 2px solid black; */
+}
+.pc{
+  width: 70%;
+  margin: auto;
+  /* margin-left: 70px; */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.content-wrapper{
+  background-color: white;
+  width: 90%;
+  height: 45%;
+  margin-left: 5%;
+  margin-top: 25px;
+  border-radius: 25px;
+  display: inline-flex;
+  box-shadow: 1px 1.5px #888;
+  /* border: 2px solid black; */
+}
+.login-form{
+  width: 90%;
+  margin-left: 7%;
+  padding: 15px;
+  /* border: 2px solid black; */
+}
+.prompt{
+  margin: auto;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.login-text{
+  height: 35px;
+  width: 235px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border:1px solid #ccc;
+  padding-left: 15px;
+}
+.btn{
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  font-size: 1.5em;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  background-color:green;
+  color: white;
+  border: 3px dotted red;
+}
+#see-btn{
+  width: 220px;
+}
+#login-btn{
+  width: 240px;
+  margin-left: 8px;
+}
+#fail{
+  margin-top: 50px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #c54245;
+  padding: 10px 20px;
+  border-radius: 25px 25px 25px 25px;
+  color: white;
+  font-size: 1.5rem;
+  /* display: none; */
+}
+footer{
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 17px;
+}
+footer a{
+  color: #c54245;
+}
+@media only screen and (min-width: 600px) {
+  body{
+      background-size: cover;
+      background-position: initial;
+  }
+  .welcome{
+      padding-top: 100px;
+      width: 23%;
+      margin: auto;
+      margin-left: 37%;
+      
+  } 
+  .santa{
+      width: 25%;
+      margin-left: 37%;
+  }
+  /* .pc{
+      border: 2px solid black;
+  } */
+  .content-wrapper{
+    max-width: 600px;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    border: 2px solid black;
+  }
+  .prompt{
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .login-wrap{
+    width: 80%;
+    margin: auto;
+  }
+  #login-btn{
+      width: 100%;
+      margin: auto;
+  }
+  #prompt-wrap{
+      /* border: 2px solid black; */
+      width: 100%;
+      display: flex;
+  }
+  .login-text{
+      width: 100%;
+      padding-left: 15px;
+  }
+  .btn:hover{
+    background-color:green;
+    color: white;
+    border: 3px dotted red;
+  }
+  .btn{
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 19px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+  }
+
+  #fail{
+    margin-top: 20px;
+    width: 400px;
+  }
+}
