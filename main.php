@@ -41,7 +41,7 @@
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
 <?php
     //get preferences
-    $mysqli = new mysqli("127.0.0.1", "root", "", "kriskringle");
+    $mysqli = new mysqli("127.0.0.1", "root", "keyhole1", "kriskringle");
     if ($mysqli->connect_errno) {
         echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
@@ -107,7 +107,7 @@
                 <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
 <?php
     //set preferences
-    $conn = new mysqli("127.0.0.1", "root", "", "kriskringle");
+    $conn = new mysqli("127.0.0.1", "root", "keyhole1", "kriskringle");
     if ($conn->connect_errno) {
        echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
     }
