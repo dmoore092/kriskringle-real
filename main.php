@@ -41,7 +41,7 @@
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
 <?php
     //get preferences
-    $mysqli = new mysqli("localhost", "root", "", "kriskringle");
+    $mysqli = new mysqli("167.99.9.216", "root", "", "kriskringle");
     // if ($mysqli->connect_errno) {
     //     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     // }
