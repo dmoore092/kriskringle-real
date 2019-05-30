@@ -1,6 +1,4 @@
-<?php include 'assets/inc/head.inc.php'; 
-phpinfo();
-?>
+<?php include 'assets/inc/head.inc.php'; ?>
 
     <div>
         <img src="/assets/img/santa.png" alt="santa" id = "santa1" />
@@ -43,6 +41,7 @@ phpinfo();
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
 <?php
     //get preferences
+    echo "test";
     $mysqli = new mysqli("localhost", "root", "", "kriskringle");
     if ($mysqli->connect_errno) {
         echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
