@@ -1,4 +1,6 @@
-<?php include 'assets/inc/head.inc.php'; ?>
+<?php include 'assets/inc/head.inc.php'; 
+phpinfo();
+?>
 
     <div>
         <img src="/assets/img/santa.png" alt="santa" id = "santa1" />
