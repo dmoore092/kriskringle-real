@@ -41,10 +41,10 @@
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
 <?php
     //get preferences
-    // $mysqli = new mysqli("127.0.0.1", "root", "", "kriskringle");
-    // if ($mysqli->connect_errno) {
-    //     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    // }
+    $mysqli = new mysqli("127.0.0.1", "root", "", "kriskringle");
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
     // $name = $_POST['name-see'];
     // if(isset($_POST['see-prefs'])){
     //     $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
