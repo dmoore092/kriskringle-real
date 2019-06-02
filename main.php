@@ -107,7 +107,8 @@
                 <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
 <?php
     //set preferences
-    $conn = new mysqli("localhost", "root", "", "kriskringle");
+    //$conn = new mysqli("localhost", "root", "", "kriskringle");
+    $conn = new mysqli("thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "j37292f0v1vpzfk1", "ifgpishmejci95mc", "mgmvuiir2cf63tq7");
     if ($conn->connect_errno) {
        echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
     }
