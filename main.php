@@ -41,28 +41,29 @@
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
 <?php
     //get preferences
-    $mysqli = new mysqli("localhost", "root", " ", "kriskringle");
-    // if ($mysqli->connect_errno) {
-    //     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    // }
-    // $name = $_POST['name-see'];
-    // if(isset($_POST['see-prefs'])){
-    //     $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
-    //     $row = $results->fetch_assoc();
-    //     if(empty($row['pref1']) && empty($row['pref2']) && empty($row['pref3'])){
-    //         echo "<div class='alert'>
-    //                 <p>Aww! {$name} hasn't updated {$row['pronoun1']} preferences. Message {$row['pronoun2']} and tell {$row['pronoun2']} to add them here!</p>
-    //                 </div>";
-    //     }
-    //     else{
-    //         echo "<div class='show-prefs'>
-    //             <p>{$row['name']}'s first preference: {$row['pref1']}</p>
-    //             <p>{$row['name']}'s second preference: {$row['pref2']}</p>
-    //             <p>{$row['name']}'s third preference: {$row['pref3']}</p>
-    //         </div>";  
-    //     }
+    //$mysqli = new mysqli("localhost", "root", " ", "kriskringle");
+    $mysqli = new mysqli("thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "j37292f0v1vpzfk1", "ifgpishmejci95mc", "mgmvuiir2cf63tq7");
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    $name = $_POST['name-see'];
+    if(isset($_POST['see-prefs'])){
+        $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
+        $row = $results->fetch_assoc();
+        if(empty($row['pref1']) && empty($row['pref2']) && empty($row['pref3'])){
+            echo "<div class='alert'>
+                    <p>Aww! {$name} hasn't updated {$row['pronoun1']} preferences. Message {$row['pronoun2']} and tell {$row['pronoun2']} to add them here!</p>
+                    </div>";
+        }
+        else{
+            echo "<div class='show-prefs'>
+                <p>{$row['name']}'s first preference: {$row['pref1']}</p>
+                <p>{$row['name']}'s second preference: {$row['pref2']}</p>
+                <p>{$row['name']}'s third preference: {$row['pref3']}</p>
+            </div>";  
+        }
 
-    // }
+    }
 ?>
         </form>
     </div>
