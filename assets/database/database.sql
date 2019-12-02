@@ -30,6 +30,7 @@ INSERT INTO preferences(
 ('Dale','','','','his','him'),
 ('Dave','','','','his','him'),
 ('Denise','','','','her','her'),
+('Dennis','','','','he','him'),
 ('Emma','','','','her','her'),
 ('Erin','','','','her','her'),
 ('Gi','','','','her','her'),

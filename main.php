@@ -18,6 +18,7 @@
                 <option <?php if($_POST['name-see'] == 'Dale'){ echo 'selected'; } ?>  value="Dale">Dale's</option>
                 <option <?php if($_POST['name-see'] == 'Dave'){ echo 'selected'; } ?>  value="Dave">Dave's</option>
                 <option <?php if($_POST['name-see'] == 'Denise'){ echo 'selected'; } ?>  value="Denise">Denise's</option>
+                <option <?php if($_POST['name-see'] == 'Dennis'){ echo 'selected'; } ?>  value="Dennis">Dennis'</option>
                 <option <?php if($_POST['name-see'] == 'Emma'){ echo 'selected'; } ?>  value="Emma">Emma's</option>
                 <option <?php if($_POST['name-see'] == 'Erin'){ echo 'selected'; } ?>  value="Erin">Erin's</option>
                 <option <?php if($_POST['name-see'] == 'Gi'){ echo 'selected'; } ?>  value="Gi">Gi's</option>
@@ -26,16 +27,16 @@
                 <option <?php if($_POST['name-see'] == 'John'){ echo 'selected'; } ?>  value="John">John's</option>
                 <option <?php if($_POST['name-see'] == 'JP'){ echo 'selected'; } ?>  value="JP">JP's</option>
                 <option <?php if($_POST['name-see'] == 'Justin'){ echo 'selected'; } ?>  value="Justin">Justin's</option>
-                <option <?php if($_POST['name-see'] == 'Linda'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Linda'){ echo 'selected'; } ?>  value="Linda">Linda's</option>
                 <option <?php if($_POST['name-see'] == 'Lizzie'){ echo 'selected'; } ?>  value="Lizzie">Lizzie's</option>
                 <option <?php if($_POST['name-see'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle's</option>
                 <option <?php if($_POST['name-see'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.'s</option>
                 <option <?php if($_POST['name-see'] == 'Richie W.'){ echo 'selected'; } ?>  value="Richie W.">Richie W.'s</option>
-                <option <?php if($_POST['name-see'] == 'Sam'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Sam'){ echo 'selected'; } ?>  value="Sam">Sam's</option>
                 <option <?php if($_POST['name-see'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.'s</option>
                 <option <?php if($_POST['name-see'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.'s</option>
-                <option <?php if($_POST['name-see'] == 'Tina'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
-                <option <?php if($_POST['name-see'] == 'Vicky'){ echo 'selected'; } ?>  value="Adam">Adam's</option>
+                <option <?php if($_POST['name-see'] == 'Tina'){ echo 'selected'; } ?>  value="Tina">Tina's</option>
+                <option <?php if($_POST['name-see'] == 'Vicky'){ echo 'selected'; } ?>  value="Vicky">Vicky's</option>
             </select>
             <p class="spacer"><span class="preferences">preferred items...</span></p>
             <button type="submit" class="btn" id="see-btn" name="see-prefs" onSubmit="">Show me!</button>
@@ -79,6 +80,7 @@
                 <option <?php if($_POST['name-set'] == 'Dale'){ echo 'selected'; } ?>  value="Dale">Dale</option>
                 <option <?php if($_POST['name-set'] == 'Dave'){ echo 'selected'; } ?>  value="Dave">Dave</option>
                 <option <?php if($_POST['name-set'] == 'Denise'){ echo 'selected'; } ?>  value="Denise">Denise</option>
+                <option <?php if($_POST['name-set'] == 'Dennis'){ echo 'selected'; } ?>  value="Dennis">Dennis</option>
                 <option <?php if($_POST['name-set'] == 'Emma'){ echo 'selected'; } ?>  value="Emma">Emma</option>
                 <option <?php if($_POST['name-set'] == 'Erin'){ echo 'selected'; } ?>  value="Erin">Erin</option>
                 <option <?php if($_POST['name-set'] == 'Gi'){ echo 'selected'; } ?>  value="Gi">Gi</option>
@@ -87,7 +89,7 @@
                 <option <?php if($_POST['name-set'] == 'John'){ echo 'selected'; } ?>  value="John">John</option>
                 <option <?php if($_POST['name-set'] == 'JP'){ echo 'selected'; } ?>  value="JP">JP</option>
                 <option <?php if($_POST['name-set'] == 'Justin'){ echo 'selected'; } ?>  value="Justin">Justin</option>
-                <option <?php if($_POST['name-set'] == 'Linda'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Linda'){ echo 'selected'; } ?>  value="Linda">Linda</option>
                 <option <?php if($_POST['name-set'] == 'Lizzie'){ echo 'selected'; } ?>  value="Lizzie">Lizzie</option>
                 <option <?php if($_POST['name-set'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle</option>
                 <option <?php if($_POST['name-set'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.</option>
@@ -95,8 +97,8 @@
                 <option <?php if($_POST['name-set'] == 'Sam'){ echo 'selected'; } ?>  value="Adam">Adam</option>
                 <option <?php if($_POST['name-set'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.</option>
                 <option <?php if($_POST['name-set'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.</option>
-                <option <?php if($_POST['name-set'] == 'Tina'){ echo 'selected'; } ?>  value="Adam">Adam</option>
-                <option <?php if($_POST['name-set'] == 'Vicky'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Tina'){ echo 'selected'; } ?>  value="Tina">Tina</option>
+                <option <?php if($_POST['name-set'] == 'Vicky'){ echo 'selected'; } ?>  value="Vicky">Vicky</option>
             </select>
             <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
             <span class="preferences">Preference 1:</span>
