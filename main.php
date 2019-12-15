@@ -52,25 +52,29 @@
         $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
         $row = $results->fetch_assoc();
         if(empty($row['pref1']) && empty($row['pref2']) && empty($row['pref3'])){
-            ?>
+?>
             <div class='alert'>
                 <p>Aww! <?php echo $name ?> hasn't updated <?php echo $row['pronoun1'] ?> preferences. Message <?php echo $row['pronoun2'] ?> and tell <?php echo $row['pronoun2'] ?> to add them here!</p>
             </div>
- <?php       }
-        else{
-            ?>
+<?php }else{ ?>
             <div class='show-prefs'>
             <p> <?php echo $row['name'] ?>'s first preference:<br> <?php echo $row['pref1']?>
             <br>
+        <?php if($row['pref1link'] != ""){ ?>
             <a href='<?php echo $row['pref1link']?>' target='_blank'>Link</a>
+        <?php } ?>
             </p>
             <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
             <br>
+            <?php if($row['pref12ink'] != ""){ ?>
             <a href='<?php echo $row['pref2link']?>' target='_blank'>Link</a>
+        <?php } ?>
             </p>
             <p><?php echo $row['name']?>'s third preference:<br> <?php echo $row['pref3']?>
             <br>
+            <?php if($row['pref3link'] != ""){ ?>
             <a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a>
+        <?php } ?>
             </p>
         </div>  
 <?php        }
