@@ -59,8 +59,11 @@
         else{
             echo "<div class='show-prefs'>
                 <p>{$row['name']}'s first preference: {$row['pref1']}</p>
+                <p>Link: {$row['pref1link']}</p>
                 <p>{$row['name']}'s second preference: {$row['pref2']}</p>
+                <p>Link: {$row['pref2link']}</p>
                 <p>{$row['name']}'s third preference: {$row['pref3']}</p>
+                <p>Link: {$row['pref3link']}</p>
             </div>";  
         }
 
@@ -102,12 +105,21 @@
             </select>
             <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
             <span class="preferences">Preference 1:</span>
-                <input type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
-                <span class="preferences">Preference 2:</span>
-                <input type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
-                <span class="preferences">Preference 3:</span>
-                <input type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
-                <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
+            <input type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
+            <span class="preferences">Link to product:</span>
+            <input type="text" name="pref1link" id="pref1link" value='<?php echo $_POST['pref1link'] ?>'>
+            <hr>
+            <span class="preferences">Preference 2:</span>
+            <input type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
+            <span class="preferences">Link to product:</span>
+            <input type="text" name="pref2link" id="pref2link" value='<?php echo $_POST['pref2link'] ?>'>
+            <hr>
+            <span class="preferences">Preference 3:</span>
+            <input type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
+            <span class="preferences">Link to product:</span>
+            <input type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
+            <hr>
+            <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
 <?php
     //set preferences
     //$conn = new mysqli("localhost", "root", "", "kriskringle");
@@ -118,13 +130,16 @@
     $name2 = $_POST['name-set'];
     if(isset($_POST['set-prefs'])){
         $pref1 = $_POST['pref1'];
+        $pref1link = $_POST['pref1link'];
         $pref2 = $_POST['pref2'];
+        $pref2link = $_POST['pref2link'];
         $pref3 = $_POST['pref3'];
+        $pref3link = $_POST['pref3link'];
 
         //$pref1 = mysql_real_escape_string($pref1);
         if($pref1 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ? WHERE name = "'.$name2.'";');
-            $stmt->bind_param("s", $pref1); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ? AND pref1link = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("ss", $pref1, $pref1link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success1 = true;
             }
@@ -134,8 +149,8 @@
 
         }
         if($pref2 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ? WHERE name = "'.$name2.'";');
-            $stmt->bind_param("s", $pref2); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ? AND pref2link = ?  WHERE name = "'.$name2.'";');
+            $stmt->bind_param("ss", $pref2, $pref2link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success2 = true;
             }
@@ -144,8 +159,8 @@
             }
         }
         if($pref3 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ? WHERE name = "'.$name2.'";');
-            $stmt->bind_param("s", $pref3); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ? AND pref3link = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("ss", $pref3, $pref3link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success3 = true;
             }
