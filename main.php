@@ -58,12 +58,18 @@
         }
         else{
             echo "<div class='show-prefs'>
-                <p>{$row['name']}'s first preference: {$row['pref1']}</p>
-                <a href='{$row['pref1link']}'>Link</a>
-                <p>{$row['name']}'s second preference: {$row['pref2']}</p>
-                <a href='{$row['pref2link']}'>Link</a>
-                <p>{$row['name']}'s third preference: {$row['pref3']}</p>
-                <a href='{$row['pref3link']}'>Link</a>
+                <p>{$row['name']}'s first preference: {$row['pref1']}
+                <br>
+                <a href='{$row['pref1link']}' target='_blank'>Link</a>
+                </p>
+                <p>{$row['name']}'s second preference: {$row['pref2']}
+                <br>
+                <a href='{$row['pref2link']}' target='_blank'>Link</a>
+                </p>
+                <p>{$row['name']}'s third preference: {$row['pref3']}
+                <br>
+                <a href='{$row['pref3link']}' target='_blank'>Link</a>
+                </p>
             </div>";  
         }
 
