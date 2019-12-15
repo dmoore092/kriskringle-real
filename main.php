@@ -78,7 +78,7 @@
         </form>
     </div>
     <div class="content-wrapper">
-        <form id="set-form" method="POST" action="" onsubmit='document.getElementsByClassName("clear").value="";'>
+        <form id="set-form" method="POST" action="">
             <p class="spacer"><span class="preferences">I am..</span></p>
             <select value="" onChange="" name ="name-set">
                 <option value='' selected disabled >Select</option>
@@ -176,6 +176,7 @@
         }
         if($success1 == true || $success2 == true || $success3 == true){
             echo "<div class='saved'>Preferences Saved!</div>";
+            echo "<script>document.getElementsByClassName('clear').value='';</script>";
         }
         else{
             echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were saved. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
