@@ -59,11 +59,11 @@
         else{
             echo "<div class='show-prefs'>
                 <p>{$row['name']}'s first preference: {$row['pref1']}</p>
-                <p>Link: {$row['pref1link']}</p>
+                <a href='{$row['pref1link']}>Link</a>'
                 <p>{$row['name']}'s second preference: {$row['pref2']}</p>
-                <p>Link: {$row['pref2link']}</p>
+                <a href='{$row['pref2link']}>Link</a>'
                 <p>{$row['name']}'s third preference: {$row['pref3']}</p>
-                <p>Link: {$row['pref3link']}</p>
+                <a href='{$row['pref3link']}>Link</a>'
             </div>";  
         }
 
