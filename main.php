@@ -52,26 +52,28 @@
         $results = $mysqli->query("SELECT * FROM preferences WHERE name = '{$name}';");
         $row = $results->fetch_assoc();
         if(empty($row['pref1']) && empty($row['pref2']) && empty($row['pref3'])){
-            echo "<div class='alert'>
-                    <p>Aww! {$name} hasn't updated {$row['pronoun1']} preferences. Message {$row['pronoun2']} and tell {$row['pronoun2']} to add them here!</p>
-                    </div>";
-        }
+            ?>
+            <div class='alert'>
+                <p>Aww! <?php echo $name ?> hasn't updated <?php echo $row['pronoun1'] ?> preferences. Message <?php echo $row['pronoun2'] ?> and tell <?php echo $row['pronoun2'] ?> to add them here!</p>
+            </div>
+ <?php       }
         else{
-            echo "<div class='show-prefs'>
-                <p>{$row['name']}'s first preference:<br> {$row['pref1']}
-                <br>
-                <a href='{$row['pref1link']}' target='_blank'>Link</a>
-                </p>
-                <p>{$row['name']}'s second preference:<br> {$row['pref2']}
-                <br>
-                <a href='{$row['pref2link']}' target='_blank'>Link</a>
-                </p>
-                <p>{$row['name']}'s third preference:<br> {$row['pref3']}
-                <br>
-                <a href='{$row['pref3link']}' target='_blank'>Link</a>
-                </p>
-            </div>";  
-        }
+            ?>
+            <div class='show-prefs'>
+            <p> <?php echo $row['name'] ?>'s first preference:<br> <?php echo $row['pref1']?>
+            <br>
+            <a href='<?php echo $row['pref1link']?>' target='_blank'>Link</a>
+            </p>
+            <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
+            <br>
+            <a href='<?php echo $row['pref2link']?>' target='_blank'>Link</a>
+            </p>
+            <p><?php echo $row['name']?>'s third preference:<br> <?php echo $row['pref3']?>
+            <br>
+            <a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a>
+            </p>
+        </div>  
+<?php        }
 
     }
 ?>
@@ -188,3 +190,7 @@
       </div>
 <?php include 'assets/inc/footer.inc.php'; ?>
 
+choice 1 : Purity Made Simple face cleanser https://www.qvc.com/philosophy-purity-made-simple-cleanser-8-oz.product.A27507.html?sc=SRCH
+
+Sam's second preference:
+Tenn Vols Tshirt size Small https://shop.utsports.com/mens-fanatics-branded-charcoal-tennessee-volunteers-showtime-square-up-t-shirt/p-70406822901933+z-890-453985313?_ref=p-DLP:m-GRID:i-r1c0:po-3
