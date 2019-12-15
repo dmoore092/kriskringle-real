@@ -94,7 +94,7 @@
                 <option <?php if($_POST['name-set'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle</option>
                 <option <?php if($_POST['name-set'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.</option>
                 <option <?php if($_POST['name-set'] == 'Richie W.'){ echo 'selected'; } ?>  value="Richie W.">Richie W.</option>
-                <option <?php if($_POST['name-set'] == 'Sam'){ echo 'selected'; } ?>  value="Adam">Adam</option>
+                <option <?php if($_POST['name-set'] == 'Sam'){ echo 'selected'; } ?>  value="Sam">Sam</option>
                 <option <?php if($_POST['name-set'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.</option>
                 <option <?php if($_POST['name-set'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.</option>
                 <option <?php if($_POST['name-set'] == 'Tina'){ echo 'selected'; } ?>  value="Tina">Tina</option>
