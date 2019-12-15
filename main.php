@@ -66,7 +66,7 @@
             </p>
             <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
             <br>
-            <?php if($row['pref12ink'] != ""){ ?>
+            <?php if($row['pref2ink'] != ""){ ?>
             <a href='<?php echo $row['pref2link']?>' target='_blank'>Link</a>
         <?php } ?>
             </p>
