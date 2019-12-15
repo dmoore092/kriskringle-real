@@ -187,8 +187,3 @@
         </form>
       </div>
 <?php include 'assets/inc/footer.inc.php'; ?>
-
-choice 1 : Purity Made Simple face cleanser https://www.qvc.com/philosophy-purity-made-simple-cleanser-8-oz.product.A27507.html?sc=SRCH
-
-Sam's second preference:
-Tenn Vols Tshirt size Small https://shop.utsports.com/mens-fanatics-branded-charcoal-tennessee-volunteers-showtime-square-up-t-shirt/p-70406822901933+z-890-453985313?_ref=p-DLP:m-GRID:i-r1c0:po-3
