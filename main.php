@@ -78,7 +78,7 @@
         </form>
     </div>
     <div class="content-wrapper">
-        <form id="set-form" method="POST" action="">
+        <form id="set-form" method="POST" action="" onsubmit='document.getElementsByClassName("clear").value="";'>
             <p class="spacer"><span class="preferences">I am..</span></p>
             <select value="" onChange="" name ="name-set">
                 <option value='' selected disabled >Select</option>
@@ -110,20 +110,20 @@
                 <option <?php if($_POST['name-set'] == 'Vicky'){ echo 'selected'; } ?>  value="Vicky">Vicky</option>
             </select>
             <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
-            <span class="preferences">Preference 1:</span>
-            <input type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
-            <span class="preferences">Link to product:</span>
-            <input type="text" name="pref1link" id="pref1link" value='<?php echo $_POST['pref1link'] ?>'>
+            <span class="preferences clear">Preference 1:</span>
+            <input class = "clear" type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref1link" id="pref1link" value='<?php echo $_POST['pref1link'] ?>'>
             <hr>
-            <span class="preferences">Preference 2:</span>
-            <input type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
-            <span class="preferences">Link to product:</span>
-            <input type="text" name="pref2link" id="pref2link" value='<?php echo $_POST['pref2link'] ?>'>
+            <span class="preferences clear">Preference 2:</span>
+            <input class = "clear" type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref2link" id="pref2link" value='<?php echo $_POST['pref2link'] ?>'>
             <hr>
-            <span class="preferences">Preference 3:</span>
-            <input type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
-            <span class="preferences">Link to product:</span>
-            <input type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
+            <span class="preferences clear">Preference 3:</span>
+            <input class = "clear" type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
             <hr>
             <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
 <?php
