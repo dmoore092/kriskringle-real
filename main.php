@@ -138,7 +138,7 @@
 
         //$pref1 = mysql_real_escape_string($pref1);
         if($pref1 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ? AND pref1link = ? WHERE name = "'.$name2.'";');
+            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ? WHERE name = "'.$name2.'";');
             $stmt->bind_param("ss", $pref1, $pref1link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success1 = true;
@@ -149,7 +149,7 @@
 
         }
         if($pref2 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ? AND pref2link = ?  WHERE name = "'.$name2.'";');
+            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ?, pref2link = ?  WHERE name = "'.$name2.'";');
             $stmt->bind_param("ss", $pref2, $pref2link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success2 = true;
@@ -159,7 +159,7 @@
             }
         }
         if($pref3 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ? AND pref3link = ? WHERE name = "'.$name2.'";');
+            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
             $stmt->bind_param("ss", $pref3, $pref3link); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success3 = true;
