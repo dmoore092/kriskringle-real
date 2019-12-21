@@ -119,17 +119,21 @@ error_reporting(0);
             <span class="preferences clear">Link to item:</span>
             <input class = "clear" type="text" name="pref1link" id="pref1link" value='<?php echo $_POST['pref1link'] ?>'>
             <span class="preferences clear">Notes:</span>
-            <textarea class = "clear" name="pref1area" id="pref1area" ><?php echo $_POST['pref1area']; ?></textarea>
+            <input class = "clear" type="text" name="pref1note" id="pref1note" value='<?php echo $_POST['pref1note'] ?>'>
             <hr>
             <span class="preferences clear">Preference 2:</span>
             <input class = "clear" type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
             <span class="preferences clear">Link to item:</span>
             <input class = "clear" type="text" name="pref2link" id="pref2link" value='<?php echo $_POST['pref2link'] ?>'>
+            <span class="preferences clear">Notes:</span>
+            <input class = "clear" type="text" name="pref2note" id="pref2note" value='<?php echo $_POST['pref2note'] ?>'>
             <hr>
             <span class="preferences clear">Preference 3:</span>
             <input class = "clear" type="text" name="pref3" id="pref3" value='<?php echo $_POST['pref3'] ?>'>
             <span class="preferences clear">Link to item:</span>
             <input class = "clear" type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
+            <span class="preferences clear">Notes:</span>
+            <input class = "clear" type="text" name="pref3note" id="pref3note" value='<?php echo $_POST['pref3note'] ?>'>
             <hr>
             <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
             <button type="submit" class="btn" id="set-btn" name="clear-prefs">Delete my preferences and start over</button>
