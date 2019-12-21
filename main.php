@@ -1,7 +1,7 @@
 <?php include 'assets/inc/head.inc.php'; 
-ini_set('display_errors', 0);
-ini_set('display_startup_errors', 0);
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 
     <div>
@@ -89,32 +89,32 @@ error_reporting(0);
             <p class="spacer"><span class="preferences">I am..</span></p>
             <select value="" onChange="" name ="name-set">
                 <option value='' selected disabled >Select</option>
-                <option <?php if($_POST['name-set'] == 'Adam'){ echo 'selected'; } ?>  value="Adam">Adam</option>
-                <option <?php if($_POST['name-set'] == 'Amanda'){ echo 'selected'; } ?>  value="Amanda">Amanda</option>
-                <option <?php if($_POST['name-set'] == 'Audrey'){ echo 'selected'; } ?>  value="Audrey">Audrey</option>
-                <option <?php if($_POST['name-set'] == 'Chloe'){ echo 'selected'; } ?>  value="Chloe">Chloe</option>
-                <option <?php if($_POST['name-set'] == 'Dale'){ echo 'selected'; } ?>  value="Dale">Dale</option>
-                <option <?php if($_POST['name-set'] == 'Dave'){ echo 'selected'; } ?>  value="Dave">Dave</option>
-                <option <?php if($_POST['name-set'] == 'Denise'){ echo 'selected'; } ?>  value="Denise">Denise</option>
-                <option <?php if($_POST['name-set'] == 'Dennis'){ echo 'selected'; } ?>  value="Dennis">Dennis</option>
-                <option <?php if($_POST['name-set'] == 'Emma'){ echo 'selected'; } ?>  value="Emma">Emma</option>
-                <option <?php if($_POST['name-set'] == 'Erin'){ echo 'selected'; } ?>  value="Erin">Erin</option>
-                <option <?php if($_POST['name-set'] == 'Gi'){ echo 'selected'; } ?>  value="Gi">Gi</option>
-                <option <?php if($_POST['name-set'] == 'Harry'){ echo 'selected'; } ?>  value="Harry">Harry</option>
-                <option <?php if($_POST['name-set'] == 'Jason'){ echo 'selected'; } ?>  value="Jason">Jason</option>
-                <option <?php if($_POST['name-set'] == 'John'){ echo 'selected'; } ?>  value="John">John</option>
-                <option <?php if($_POST['name-set'] == 'JP'){ echo 'selected'; } ?>  value="JP">JP</option>
-                <option <?php if($_POST['name-set'] == 'Justin'){ echo 'selected'; } ?>  value="Justin">Justin</option>
-                <option <?php if($_POST['name-set'] == 'Linda'){ echo 'selected'; } ?>  value="Linda">Linda</option>
-                <option <?php if($_POST['name-set'] == 'Lizzie'){ echo 'selected'; } ?>  value="Lizzie">Lizzie</option>
-                <option <?php if($_POST['name-set'] == 'Michelle'){ echo 'selected'; } ?>  value="Michelle">Michelle</option>
-                <option <?php if($_POST['name-set'] == 'Richie T.'){ echo 'selected'; } ?>  value="Richie T.">Richie T.</option>
-                <option <?php if($_POST['name-set'] == 'Richie W.'){ echo 'selected'; } ?>  value="Richie W.">Richie W.</option>
-                <option <?php if($_POST['name-set'] == 'Sam'){ echo 'selected'; } ?>  value="Sam">Sam</option>
-                <option <?php if($_POST['name-set'] == 'Steven Jr.'){ echo 'selected'; } ?>  value="Steven Jr.">Steven Jr.</option>
-                <option <?php if($_POST['name-set'] == 'Steven Sr.'){ echo 'selected'; } ?>  value="Steven Sr.">Steven Sr.</option>
-                <option <?php if($_POST['name-set'] == 'Tina'){ echo 'selected'; } ?>  value="Tina">Tina</option>
-                <option <?php if($_POST['name-set'] == 'Vicky'){ echo 'selected'; } ?>  value="Vicky">Vicky</option>
+                <option value="Adam">Adam</option>
+                <option value="Amanda">Amanda</option>
+                <option value="Audrey">Audrey</option>
+                <option value="Chloe">Chloe</option>
+                <option value="Dale">Dale</option>
+                <option value="Dave">Dave</option>
+                <option value="Denise">Denise</option>
+                <option value="Dennis">Dennis</option>
+                <option value="Emma">Emma</option>
+                <option value="Erin">Erin</option>
+                <option value="Gi">Gi</option>
+                <option value="Harry">Harry</option>
+                <option value="Jason">Jason</option>
+                <option value="John">John</option>
+                <option value="JP">JP</option>
+                <option value="Justin">Justin</option>
+                <option value="Linda">Linda</option>
+                <option value="Lizzie">Lizzie</option>
+                <option value="Michelle">Michelle</option>
+                <option value="Richie T.">Richie T.</option>
+                <option value="Richie W.">Richie W.</option>
+                <option value="Sam">Sam</option>
+                <option value="Steven Jr.">Steven Jr.</option>
+                <option value="Steven Sr.">Steven Sr.</option>
+                <option value="Tina">Tina</option>
+                <option value="Vicky">Vicky</option>
             </select>
             <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
             <span class="preferences clear">Preference 1:</span>
