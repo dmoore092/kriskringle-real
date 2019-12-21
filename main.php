@@ -64,8 +64,8 @@ error_reporting(0);
             <div class='show-prefs'>
             <p> <?php echo $row['name'] ?>'s first preference:<br> <?php echo $row['pref1']?>
             <br>
-        <?php if($row['pref1link'] != ""){ ?><a href='<?php echo $row['pref1link']?>' target='_blank'>Link</a><?php } ?>
-            <?php if($row['pref1note'] != ""){ ?> <p>Note: <?php echo $row['pref1note'] ?></p> <?php }?>
+        <?php if($row['pref1note'] != ""){ ?> Note: <?php echo $row['pref1note'] ?> <?php }?>
+            <?php if($row['pref1link'] != ""){ ?><a href='<?php echo $row['pref1link']?>' target='_blank'>Link</a><?php } ?>
             </p>
             <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
             <br>
@@ -117,24 +117,24 @@ error_reporting(0);
             <p class="spacer"><span class="preferences">and my top 3 items are...</span></p>
             <span class="preferences clear">Preference 1:</span>
             <input class = "clear" type="text" name="pref1" id="pref1" value=''>
-            <span class="preferences clear">Link to item:</span>
-            <input class = "clear" type="text" name="pref1link" id="pref1link" value=''>
             <span class="preferences clear">Notes:</span>
             <input class = "clear" type="text" name="pref1note" id="pref1note" value=''>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref1link" id="pref1link" value=''>
             <hr>
             <span class="preferences clear">Preference 2:</span>
             <input class = "clear" type="text" name="pref2" id="pref2" value=''>
-            <span class="preferences clear">Link to item:</span>
-            <input class = "clear" type="text" name="pref2link" id="pref2link" value='''>
             <span class="preferences clear">Notes:</span>
             <input class = "clear" type="text" name="pref2note" id="pref2note" value=''>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref2link" id="pref2link" value='''>
             <hr>
             <span class="preferences clear">Preference 3:</span>
             <input class = "clear" type="text" name="pref3" id="pref3" value=''>
-            <span class="preferences clear">Link to item:</span>
-            <input class = "clear" type="text" name="pref3link" id="pref3link" value=''>
             <span class="preferences clear">Notes:</span>
             <input class = "clear" type="text" name="pref3note" id="pref3note" value=''>
+            <span class="preferences clear">Link to item:</span>
+            <input class = "clear" type="text" name="pref3link" id="pref3link" value=''>
             <hr>
             <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
             <button type="submit" class="btn" id="set-btn" name="clear-prefs">Delete my preferences and start over</button>
