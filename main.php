@@ -150,8 +150,17 @@ error_reporting(0);
 
     if(isset($_POST['clear-prefs'])){
         $emptyString = "";
-        $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref2 = ?, pref2link = ?, pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
-        $clear->bind_param("ssssss", $emptyString,$emptyString,$emptyString,$emptyString,$emptyString,$emptyString,); 
+        $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, 
+                                                        pref1link = ?,
+                                                        pref1note = ?, 
+                                                        pref2 = ?, 
+                                                        pref2link = ?, 
+                                                        pref2note = ?,
+                                                        pref3 = ?, 
+                                                        pref3link = ? 
+                                                        pref3note = ?,
+                                                        WHERE name = "'.$name2.'";');
+        $clear->bind_param("sssssssss", $emptyString,$emptyString,$emptyString,$emptyString,$emptyString,$emptyString,$emptyString,$emptyString,$emptyString); 
         if($clear->execute()){
             echo "<div class='saved'>Preferences Reset!</div>";
             echo "<script>document.getElementsByClassName('clear').value='';</script>";
@@ -163,15 +172,18 @@ error_reporting(0);
     else if(isset($_POST['set-prefs'])){
         $pref1 = $_POST['pref1'];
         $pref1link = $_POST['pref1link'];
+        $pref1note = $_POST['pref1note'];
         $pref2 = $_POST['pref2'];
         $pref2link = $_POST['pref2link'];
+        $pref2note = $_POST['pref2note'];
         $pref3 = $_POST['pref3'];
         $pref3link = $_POST['pref3link'];
+        $pref3note = $_POST['pref3note'];
 
         //$pref1 = mysql_real_escape_string($pref1);
         if($pref1 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ? WHERE name = "'.$name2.'";');
-            $stmt->bind_param("ss", $pref1, $pref1link); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref1note = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("sss", $pref1, $pref1link, $pref1note); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success1 = true;
             }
@@ -180,8 +192,8 @@ error_reporting(0);
             }
         }
         if($pref2 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ?, pref2link = ?  WHERE name = "'.$name2.'";');
-            $stmt->bind_param("ss", $pref2, $pref2link); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref2 = ?, pref2link = ?, pref2note = ?  WHERE name = "'.$name2.'";');
+            $stmt->bind_param("sss", $pref2, $pref2link, $pref2note); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success2 = true;
             }
@@ -190,8 +202,8 @@ error_reporting(0);
             }
         }
         if($pref3 != ''){
-            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
-            $stmt->bind_param("ss", $pref3, $pref3link); // 's' specifies the variable type => 'string'
+            $stmt = $conn->prepare('UPDATE preferences SET pref3 = ?, pref3link = ?, pref3note = ? WHERE name = "'.$name2.'";');
+            $stmt->bind_param("sss", $pref3, $pref3link, $pref3note); // 's' specifies the variable type => 'string'
             if($stmt->execute()){
                 $success3 = true;
             }
