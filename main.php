@@ -138,9 +138,8 @@
     $name2 = $_POST['name-set'];
 
     if(isset($_POST['clear-prefs'])){
-        var_dump($name2);
-        $clear = $conn->prepare('DELETE FROM preferences pref1, pref1link, pref2, pref2link, pref3, pref3link WHERE name = "'.$name2.'";');
-        //$stmt->bind_param("ssssss", "","","","","","",); // 's' specifies the variable type => 'string'
+        $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref2 = ?, pref2link = ?, pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
+        $stmt->bind_param("ssssss", " "," "," "," "," "," ",); 
         if($stmt->execute()){
             echo "<div class='saved'>Preferences Reset!</div>";
             echo "<script>document.getElementsByClassName('clear').value='';</script>";
