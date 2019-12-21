@@ -134,7 +134,20 @@
     if ($conn->connect_errno) {
        echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
     }
+
     $name2 = $_POST['name-set'];
+
+    if(isset($_POST['clear-prefs'])){
+        $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref2 = ?, pref2link = ?, pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
+        $stmt->bind_param("ssssss", "","","","","","",); // 's' specifies the variable type => 'string'
+        if($stmt->execute()){
+            $successClear = true;
+        }
+        else{
+            $successClear = false;
+        }
+    }
+
     if(isset($_POST['set-prefs'])){
         $pref1 = $_POST['pref1'];
         $pref1link = $_POST['pref1link'];
@@ -181,6 +194,14 @@
         }
         else{
             echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were saved. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
+
+        }
+        if($successClear == true){
+            echo "<div class='saved'>Preferences Reset!</div>";
+            echo "<script>document.getElementsByClassName('clear').value='';</script>";
+        }
+        else{
+            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were cleared. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
 
         }
     }
