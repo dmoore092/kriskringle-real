@@ -69,11 +69,13 @@ error_reporting(0);
             </p>
             <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
             <br>
-        <?php if($row['pref2link'] != ""){ ?><a href='<?php echo $row['pref2link']?>' target='_blank'>Link</a><?php } ?>
+        <?php if($row['pref2note'] != ""){ ?> Note: <?php echo $row['pref2note'] ?> <?php }?>
+            <?php if($row['pref2link'] != ""){ ?><a href='<?php echo $row['pref2link']?>' target='_blank'>Link</a><?php } ?>
             </p>
             <p><?php echo $row['name']?>'s third preference:<br> <?php echo $row['pref3']?>
             <br>
-        <?php if($row['pref3link'] != ""){ ?><a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a><?php } ?>
+        <?php if($row['pref3note'] != ""){ ?> Note: <?php echo $row['pref3note'] ?> <?php }?>
+            <?php if($row['pref3link'] != ""){ ?><a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a><?php } ?>
             </p>
         </div>  
 <?php        }
