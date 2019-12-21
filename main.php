@@ -126,7 +126,7 @@
             <input class = "clear" type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
             <hr>
             <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
-            <form id="clear-form" method="POST"><button type="submit" class="btn" id="set-btn" name="clear-prefs">Delete my preferences and start over</button><form>
+            <button type="submit" class="btn" id="set-btn" name="clear-prefs">Delete my preferences and start over</button>
 <?php
     //set preferences
     //$conn = new mysqli("localhost", "root", "", "kriskringle");
