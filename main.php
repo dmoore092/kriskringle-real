@@ -138,6 +138,7 @@
     $name2 = $_POST['name-set'];
 
     if(isset($_POST['clear-prefs'])){
+        var_dump($name2);
         $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref2 = ?, pref2link = ?, pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
         $stmt->bind_param("ssssss", "","","","","","",); // 's' specifies the variable type => 'string'
         if($stmt->execute()){
