@@ -70,7 +70,6 @@
             <br>
         <?php if($row['pref3link'] != ""){ ?><a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a><?php } ?>
             </p>
-            <form method="POST" action=""><button name="delete-preferences">Delete my preferences and start over</button></form>
         </div>  
 <?php        }
 
@@ -127,6 +126,7 @@
             <input class = "clear" type="text" name="pref3link" id="pref3link" value='<?php echo $_POST['pref3link'] ?>'>
             <hr>
             <button type="submit" class="btn" id="set-btn" name="set-prefs">Submit</button>
+            <button type="submit" class="btn" id="clear-btn" name="clear-prefs>Delete my preferences and start over</button>
 <?php
     //set preferences
     //$conn = new mysqli("localhost", "root", "", "kriskringle");
