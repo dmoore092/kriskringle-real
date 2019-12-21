@@ -118,6 +118,8 @@ error_reporting(0);
             <input class = "clear" type="text" name="pref1" id="pref1" value='<?php echo $_POST['pref1'] ?>'>
             <span class="preferences clear">Link to item:</span>
             <input class = "clear" type="text" name="pref1link" id="pref1link" value='<?php echo $_POST['pref1link'] ?>'>
+            <span class="preferences clear">Notes:</span>
+            <input class = "clear" type="textarea" name="pref1area" id="pref1area" value='<?php echo $_POST['pref1area'] ?>'>
             <hr>
             <span class="preferences clear">Preference 2:</span>
             <input class = "clear" type="text" name="pref2" id="pref2" value='<?php echo $_POST['pref2'] ?>'>
