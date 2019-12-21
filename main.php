@@ -65,6 +65,7 @@ error_reporting(0);
             <p> <?php echo $row['name'] ?>'s first preference:<br> <?php echo $row['pref1']?>
             <br>
         <?php if($row['pref1link'] != ""){ ?><a href='<?php echo $row['pref1link']?>' target='_blank'>Link</a><?php } ?>
+            <?php if($row['pref1note'] != ""){ ?> <p>Note: <?php echo $row['pref1note'] ?></p> <?php }?>
             </p>
             <p> <?php echo $row['name']?>'s second preference:<br> <?php echo $row['pref2']?>
             <br>
