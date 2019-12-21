@@ -70,6 +70,7 @@
             <br>
         <?php if($row['pref3link'] != ""){ ?><a href='<?php echo $row['pref3link']?>' target='_blank'>Link</a><?php } ?>
             </p>
+            <form method="POST" action=""><button name="delete-preferences">Delete my preferences and start over</button></form>
         </div>  
 <?php        }
 
