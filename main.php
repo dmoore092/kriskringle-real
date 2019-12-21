@@ -1,4 +1,8 @@
-<?php include 'assets/inc/head.inc.php'; ?>
+<?php include 'assets/inc/head.inc.php'; 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 
     <div>
         <img src="/assets/img/santa.png" alt="santa" id = "santa1" />
