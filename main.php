@@ -171,14 +171,6 @@ error_reporting(0);
             else{
                 $success1 = false;
             }
-        if($successClear == true){
-            echo "<div class='saved'>Preferences Reset!</div>";
-            echo "<script>document.getElementsByClassName('clear').value='';</script>";
-        }
-        else{
-            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were cleared. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
-
-        }
         }
         if($pref2 != ''){
             $stmt = $conn->prepare('UPDATE preferences SET pref2 = ?, pref2link = ?  WHERE name = "'.$name2.'";');
