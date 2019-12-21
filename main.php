@@ -141,14 +141,14 @@
         $clear = $conn->prepare('UPDATE preferences SET pref1 = ?, pref1link = ?, pref2 = ?, pref2link = ?, pref3 = ?, pref3link = ? WHERE name = "'.$name2.'";');
         $stmt->bind_param("ssssss", "","","","","","",); // 's' specifies the variable type => 'string'
         if($stmt->execute()){
-            $successClear = true;
+            echo "<div class='saved'>Preferences Reset!</div>";
+            echo "<script>document.getElementsByClassName('clear').value='';</script>";
         }
         else{
-            $successClear = false;
+            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were cleared. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
         }
     }
-
-    if(isset($_POST['set-prefs'])){
+    else if(isset($_POST['set-prefs'])){
         $pref1 = $_POST['pref1'];
         $pref1link = $_POST['pref1link'];
         $pref2 = $_POST['pref2'];
@@ -166,7 +166,14 @@
             else{
                 $success1 = false;
             }
+        if($successClear == true){
+            echo "<div class='saved'>Preferences Reset!</div>";
+            echo "<script>document.getElementsByClassName('clear').value='';</script>";
+        }
+        else{
+            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were cleared. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
 
+        }
         }
         if($pref2 != ''){
             $stmt = $conn->prepare('UPDATE preferences SET pref2 = ?, pref2link = ?  WHERE name = "'.$name2.'";');
@@ -194,14 +201,6 @@
         }
         else{
             echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were saved. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
-
-        }
-        if($successClear == true){
-            echo "<div class='saved'>Preferences Reset!</div>";
-            echo "<script>document.getElementsByClassName('clear').value='';</script>";
-        }
-        else{
-            echo "<div id='fail'>Uh Oh! Something went wrong, none of your preferences were cleared. Email me at <a href='mailto:dmoore092@gmail.com'>dmoore092@gmail.com</a></div>";
 
         }
     }
